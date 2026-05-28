@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section page-section">
+  <div class="section-inner">
+    <p class="section-label">Projects</p>
+    <h1 class="page-title">Work</h1>
+    <div class="card-grid">
+      {% for project in projects %}
+      <a href="/projects/{{ project.slug }}" class="card">
+        <div class="card-body">
+          <h2 class="card-title">{{ project.title }}</h2>
+          <p class="card-date">{{ project.date }}</p>
+          <p class="card-summary">{{ project.summary }}</p>
+          <div class="tag-row">
+            {% for tag in project.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

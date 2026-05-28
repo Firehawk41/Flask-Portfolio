@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section page-section">
+  <div class="section-inner">
+    <p class="section-label">Blog</p>
+    <h1 class="page-title">Writing</h1>
+    {% if posts %}
+    <div class="post-list">
+      {% for post in posts %}
+      <a href="/blog/{{ post.slug }}" class="post-row">
+        <span class="post-title">{{ post.title }}</span>
+        <span class="post-date">{{ post.date }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty-state">No posts yet.</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

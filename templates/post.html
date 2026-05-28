@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section page-section">
+  <div class="section-inner narrow">
+    <a href="/blog" class="back-link">← Blog</a>
+    <p class="section-label">Post</p>
+    <h1 class="page-title">{{ post.title }}</h1>
+    <p class="post-date">{{ post.date }}</p>
+    <div class="divider"></div>
+    <div class="prose">
+      {{ post.body_html | safe }}
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ title }} — {{ author }}">
+  <title>{{ title }} — Jamie Thomson</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">JT</a>
+      <ul class="nav-links">
+        <li><a href="/projects" class="nav-link{% if request.path.startswith('/projects') %} active{% endif %}">Projects</a></li>
+        <li><a href="/blog" class="nav-link{% if request.path.startswith('/blog') %} active{% endif %}">Blog</a></li>
+        <li><a href="/about" class="nav-link{% if request.path == '/about' %} active{% endif %}">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Jamie Thomson · Carrollton, TX</span>
+      <div class="footer-links">
+        <a href="#" class="footer-link">GitHub</a>
+        <a href="#" class="footer-link">LinkedIn</a>
+        <a href="#" class="footer-link">Email</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
