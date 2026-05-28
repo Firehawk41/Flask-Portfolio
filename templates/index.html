@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div class="hero-inner">
+    <p class="section-label">Portfolio</p>
+    <h1 class="hero-name">Jamie Thomson</h1>
+    <div class="red-rule"></div>
+    <p class="hero-bio">Software developer based in Carrollton, TX. I build tools that automate the tedious and clarify the complex.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">Featured Projects</p>
+    <div class="card-grid">
+      {% for project in projects %}
+      <a href="/projects/{{ project.slug }}" class="card">
+        <div class="card-body">
+          <h2 class="card-title">{{ project.title }}</h2>
+          <p class="card-summary">{{ project.summary }}</p>
+          <div class="tag-row">
+            {% for tag in project.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="section-cta">
+      <a href="/projects" class="btn-ghost">All projects →</a>
+    </div>
+  </div>
+</section>
+
+{% if posts %}
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">Recent Writing</p>
+    <div class="post-list">
+      {% for post in posts %}
+      <a href="/blog/{{ post.slug }}" class="post-row">
+        <span class="post-title">{{ post.title }}</span>
+        <span class="post-date">{{ post.date }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="section-cta">
+      <a href="/blog" class="btn-ghost">All posts →</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endblock %}

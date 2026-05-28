@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="section page-section">
+  <div class="section-inner narrow">
+    <a href="/projects" class="back-link">← Projects</a>
+    <p class="section-label">Project</p>
+    <h1 class="page-title">{{ project.title }}</h1>
+    <p class="page-summary">{{ project.summary }}</p>
+    <div class="tag-row">
+      {% for tag in project.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    <div class="project-meta">
+      <span class="post-date">{{ project.date }}</span>
+      {% if project.github %}
+      <a href="{{ project.github }}" class="btn-ghost" target="_blank" rel="noopener">GitHub →</a>
+      {% endif %}
+    </div>
+    <div class="divider"></div>
+    <div class="prose">
+      {{ project.body_html | safe }}
+    </div>
+  </div>
+</section>
+{% endblock %}
