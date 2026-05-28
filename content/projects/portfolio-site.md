@@ -4,7 +4,7 @@ slug: portfolio-site
 date: 2026-05-28
 tags: [Python, Flask, Jinja2, CSS, Render, Claude]
 summary: A Flask portfolio and blog site — designed, specified, and deployed using an AI-assisted workflow. The site is both the deliverable and an honest account of how I work.
-github: https://github.com/jamiethomson/portfolio
+github: https://github.com/Firehawk41/falsk-portfolio
 featured: true
 ---
 
