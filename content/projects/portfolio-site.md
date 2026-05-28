@@ -20,7 +20,7 @@ This site is both a container for my portfolio and an entry in it.
 
 ## Design process
 
-I used the Museo Ferrari in Maranello, Italy as inspiration for the design: deep charcoal with Racing Red as the accent colour.
+I used the Museo Ferrari in Maranello as inspiration for the design: deep charcoal with Racing Red as the accent colour.
 
 Constraint is a design tool. With one accent color and a near-black base, every red element carries weight.
 
