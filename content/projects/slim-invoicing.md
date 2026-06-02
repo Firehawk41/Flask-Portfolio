@@ -1,6 +1,6 @@
 ---
-title: LabPlus Invoice System
-slug: labplus
+title: SLIM Invoicing
+slug: slim-invoicing
 date: 2025-01-15
 tags: [Python, VBA, Excel, Access]
 summary: Lab billing automation system — originally built in VBA, ported to Python. Reads Excel test request forms, queries an Access database for quoted prices, and outputs a CSV for import into NetSuite.
@@ -14,7 +14,7 @@ PreciLab's billing workflow was entirely manual. Test request forms came in as E
 
 ## What I built
 
-LabPlus automates the full pipeline. It reads the Excel test request form, resolves customer and sample data, queries the Access database for the correct quoted prices, and outputs a clean CSV ready for NetSuite import.
+SLIM Invoicing automates the full pipeline. It reads the Excel test request form, resolves customer and sample data, queries the Access database for the correct quoted prices, and outputs a clean CSV ready for NetSuite import.
 
 The original was built in VBA — constrained by the lab environment. The Python port refactored the architecture into four domain layers (Entity → Repository → Cache → Service) across Analysis, Chemical, Customer, and Element domains.
 
