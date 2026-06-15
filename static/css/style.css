@@ -463,6 +463,14 @@ a {
   background: var(--bg-card);
   border: 0.5px solid var(--border);
   border-radius: var(--radius);
+  overflow: hidden;
+}
+
+#bio-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .bio-text {
