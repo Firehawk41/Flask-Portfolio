@@ -510,9 +510,9 @@ a {
   }
 
   #bio-photo {
-    float: right;
+    float: left;
     width: 100px;
     height: 100px;
-    margin: 0 0 0.75rem 1rem;
+    margin: 0 1rem 0.75rem 0;
   }
 }
