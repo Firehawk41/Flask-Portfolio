@@ -1,10 +1,10 @@
 :root {
-  --bg: #0E0E0C;
+  --bg: #1C1C1A;
   --bg-nav: #111110;
   --bg-card: #181816;
   --border: #222220;
   --text-primary: #E8E7E3;
-  --text-secondary: #4A4A47;
+  --text-secondary: #AAAAAA;
   --red: #CC0000;
   --radius: 10px;
 }
@@ -350,6 +350,12 @@ a {
   padding: 0;
   font-size: 0.8125rem;
   line-height: 1.6;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid rgba(204, 0, 0, 0.8);
+  margin: 2rem 0;
 }
 
 /* Pygments codehilite */
